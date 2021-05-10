@@ -1,0 +1,32 @@
+{
+  "name": "chrysalis-server",
+  "version": "1.0.0",
+  "description": "REST-server for the chrysalis project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec babel-node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Patapata3/chrysalis-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Patapata3/chrysalis-server/issues"
+  },
+  "homepage": "https://github.com/Patapata3/chrysalis-server#readme",
+  "dependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/node": "^7.13.13",
+    "@babel/preset-env": "^7.14.1",
+    "@babel/register": "^7.13.16",
+    "express": "^4.17.1",
+    "pg": "^8.6.0",
+    "sequelize": "^6.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

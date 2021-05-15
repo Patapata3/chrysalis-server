@@ -1,6 +1,6 @@
 export default {
     up: async (queryInterface, Sequelize) => {
-        await queryInterface.createTable('Web3Connections', {
+        await queryInterface.createTable('Accounts', {
             id: {
                 allowNull: false,
                 autoIncrement: true,
@@ -8,6 +8,9 @@ export default {
                 type: Sequelize.INTEGER
             },
             address: {
+                type: Sequelize.STRING
+            },
+            privateKey: {
                 type: Sequelize.STRING
             },
             createdAt: {
@@ -21,6 +24,6 @@ export default {
         });
     },
     down: async (queryInterface, Sequelize) => {
-        await queryInterface.dropTable('Web3Connections');
+        await queryInterface.dropTable('Accounts');
     }
 };

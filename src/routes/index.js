@@ -3,9 +3,12 @@ import AccountController from "../controllers/AccountController";
 import AbiController from "../controllers/AbiController";
 import SettingsController from "../controllers/SettingsController";
 import ProcessController from "../controllers/ProcessController";
+const cors = require('cors')
 
 
 export default (app) => {
+    app.use(cors())
+
     // Connections
     app.get('/web3Connections', ConnectionController.getConnections);
     app.post('/web3Connections', ConnectionController.postConnection);

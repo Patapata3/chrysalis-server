@@ -14,9 +14,9 @@ export default {
     },
 
     async postSettings(req, res) {
-        const {web3ConnectionId, accountId} = req.body
+        const {web3ConnectionId, accountId, isMetamask} = req.body
         try {
-            const results = await Setting.create({web3ConnectionId, accountId})
+            const results = await Setting.create({web3ConnectionId, accountId, isMetamask})
             return res.json(results)
         } catch (e) {
             console.log(e)

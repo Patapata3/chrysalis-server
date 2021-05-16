@@ -14,7 +14,8 @@ export default (sequelize, DataTypes) => {
   }
   Setting.init({
     web3ConnectionId: DataTypes.INTEGER,
-    accountId: DataTypes.INTEGER
+    accountId: DataTypes.INTEGER,
+    isMetamask: DataTypes.BOOLEAN
   }, {
     sequelize,
     modelName: 'Setting',

@@ -1,6 +1,8 @@
 import model from '../models';
+import {where} from "sequelize";
 
 const {Web3Connection} = model;
+const {Setting} = model;
 
 export default {
     async getConnections(req, res) {
@@ -26,7 +28,7 @@ export default {
 
     async deleteConnection(req, res) {
         try {
-            const results = await Web3Connection.destroy({
+             const results = await Web3Connection.destroy({
                 where: {id: req.params.id}
             })
             return res.json(results)

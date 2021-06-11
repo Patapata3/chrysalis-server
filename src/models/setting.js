@@ -8,7 +8,7 @@ export default (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Setting.belongsTo(models.Web3Connection, {foreignKey: 'web3ConnectionId', as: 'web3Connection'})
+      Setting.belongsTo(models.Web3Connection, {foreignKey: 'web3ConnectionId', as: 'web3Connection', onDelete: 'SET NULL'})
       Setting.belongsTo(models.Account, {foreignKey: 'accountId', as: 'account'})
     }
   }

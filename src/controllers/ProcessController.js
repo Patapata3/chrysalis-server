@@ -16,7 +16,7 @@ export default {
     async postProcess(req, res) {
         try {
             const {name, address, tasks} = req.body
-            const results = Process.create({
+            const results = await Process.create({
                 name: name, address: address, tasks: tasks}, {
                 include: ['tasks']
             })
